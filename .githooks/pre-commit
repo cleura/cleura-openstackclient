@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+git diff-index --check --cached HEAD --
+
+exec tox

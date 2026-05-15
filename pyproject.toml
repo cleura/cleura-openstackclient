@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm[toml]>=7"]
+
+[project]
+name = "cleura-openstack"
+dynamic = ["version"]
+description = "Conveniently installs OpenStack clients for use with Cleura Cloud"
+requires-python = ">=3.11"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "Apache-2.0"
+license-files = ["LICENSE.txt"]
+
+[dependency-groups]
+flake8 = [
+    "flake8",
+    "flake8-pyproject"
+]
+gitlint = [
+    "gitlint",
+]
+yamllint = [
+    "yamllint",
+]
+markdownlint = [
+    "pymarkdownlnt",
+]
+
+
+[tool.tox]
+requires = ["tox>=4"]
+env_list = ["yamllint", "markdownlint", "3.14", "3.13", "3.12", "3.11"]
+
+[tool.tox.env_run_base]
+description = "Run tests under {base_python}"
+commands = [["flake8"]]
+dependency_groups = ["flake8"]
+
+[tool.tox.env.gitlint]
+skip_install = true
+description = "Check Git commit message"
+commands = [["gitlint"]]
+dependency_groups = [
+    "gitlint",
+]
+
+[tool.tox.env.yamllint]
+skip_install = true
+description = "Check YAML files"
+commands = [["yamllint", "{toxinidir}"]]
+dependency_groups = [
+    "yamllint",
+]
+
+[tool.tox.env.markdownlint]
+skip_install = true
+description = "Check Markdown files"
+commands = [["pymarkdown", "-c", ".pymarkdown.json", "scan", "--respect-gitignore", "-r", "{toxinidir}"]]
+dependency_groups = [
+    "markdownlint",
+]
+
+[tool.flake8]
+max-line-length = 180
+statistics = true
+indent-size = 2
+
+[tool.setuptools_scm]
