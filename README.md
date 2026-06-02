@@ -1,4 +1,4 @@
-# `cleura-openstack`
+# `cleura-openstackclient`
 
 Conveniently installs OpenStack clients for Cleura Cloud.
 
@@ -13,12 +13,12 @@ This package provides no functionality of its own; it only installs dependencies
 To install directly from this repository, run:
 
 ```shell
-pip install git+https://github.com/cleura/cleura-openstack@v0.0.1
+pip install git+https://github.com/cleura/cleura-openstackclient@v0.0.1
 ```
 
 Then, invoke the `openstack` command provided by the `python-openstackclient` package.
 
 ## License
 
-Just like all other OpenStack client packages, `cleura-openstack` uses the Apache 2 license.
+Just like all other OpenStack client packages, `cleura-openstackclient` uses the Apache 2 license.
 See [`LICENSE.txt`](LICENSE.txt) for details.

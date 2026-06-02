@@ -2,7 +2,7 @@
 requires = ["setuptools>=61.0", "setuptools-scm[toml]>=7"]
 
 [project]
-name = "cleura-openstack"
+name = "cleura-openstackclient"
 dynamic = ["version"]
 description = "Conveniently installs OpenStack clients for use with Cleura Cloud"
 requires-python = ">=3.11"

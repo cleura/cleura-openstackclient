@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Setup for cleura-openstack package"""
+"""Setup for cleura-openstackclient package"""
 
 from setuptools import setup
 
