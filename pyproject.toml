@@ -47,6 +47,12 @@ markdownlint = [
 bumpversion = [
     "bump-my-version",
 ]
+build = [
+    "build",
+]
+release = [
+    "twine",
+]
 
 
 [tool.tox]
@@ -88,6 +94,41 @@ description = "Increment the major, minor, or patch version indicator"
 commands = [["bump-my-version", "bump", "{posargs}"]]
 dependency_groups = [
     "bumpversion",
+]
+
+[tool.tox.env.build]
+skip_install = true
+description = "Build dist package"
+commands = [
+    ["python", "-m", "build"],
+]
+dependency_groups = [
+    "build",
+    "release",
+]
+
+[tool.tox.env.test-release]
+skip_install = true
+description = "Upload build to the testpypi repository"
+commands = [
+    ["python", "-m", "build"],
+    ["python", "-m", "twine", "upload", "--verbose", "--repository", "testpypi", "dist/*"],
+]
+dependency_groups = [
+    "build",
+    "release",
+]
+
+[tool.tox.env.release]
+skip_install = true
+description = "Upload build to PyPI"
+commands = [
+    ["python", "-m", "build"],
+    ["python", "-m", "twine", "upload", "dist/*"],
+]
+dependency_groups = [
+    "build",
+    "release",
 ]
 
 [tool.flake8]

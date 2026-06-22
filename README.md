@@ -10,6 +10,12 @@ This package provides no functionality of its own; it only installs dependencies
 
 ## Installation
 
+To install from PyPI, run:
+
+```shell
+pip install cleura-openstackclient==0.0.2
+```
+
 To install directly from this repository, run:
 
 ```shell

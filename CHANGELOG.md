@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Include `python-freezerclient` in dependencies.
+* Release package to PyPI.
 
 ## Version 0.0.2 (2026-06-02)
 
