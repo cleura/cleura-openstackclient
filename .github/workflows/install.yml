@@ -1,0 +1,28 @@
+---
+name: 'Install released package from PyPI'
+
+# Run weekly, and also run on demand
+'on':
+  schedule:
+    - cron: '0 12 * * 3'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - '3.11'
+          - '3.12'
+          - '3.13'
+          - '3.14'
+    steps:
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        run: 'pip install pipdeptree cleura-openstackclient'
+      - name: Run pipdeptree
+        run: pipdeptree
