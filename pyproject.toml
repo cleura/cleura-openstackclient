@@ -4,6 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cleura-openstackclient"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: OpenStack",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: System :: Systems Administration",
+]
 dynamic = ["version"]
 description = "Conveniently installs OpenStack clients for use with Cleura Cloud"
 requires-python = ">=3.11"
