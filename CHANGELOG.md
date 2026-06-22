@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Automate PyPI uploads from GitHub Actions.
+
 ## Version 0.0.3 (2026-06-22)
 
 * Include `python-freezerclient` in dependencies.
