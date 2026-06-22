@@ -44,6 +44,8 @@ license-files = ["LICENSE.txt"]
 [project.urls]
 Homepage = "https://github.com/cleura/cleura-openstackclient"
 Issues = "https://github.com/cleura/cleura-openstackclient/issues"
+Changelog = "https://github.com/cleura/cleura-openstackclient/blob/main/CHANGELOG.md"
+PyPI = "https://pypi.org/project/cleura-openstackclient/"
 
 [dependency-groups]
 flake8 = [
