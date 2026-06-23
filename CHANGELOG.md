@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 0.0.5 (2026-06-23)
 
 * Update package metadata (URLs and PyPI classifiers).
 
