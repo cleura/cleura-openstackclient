@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Update package metadata (URLs and PyPI classifiers).
+
 ## Version 0.0.4 (2026-06-22)
 
 * Automate PyPI uploads from GitHub Actions.
