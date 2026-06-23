@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Bump `python-freezerclient` dependency to version 6.4, to enable integration with the `openstack` CLI.
+
 ## Version 0.0.5 (2026-06-23)
 
 * Update package metadata (URLs and PyPI classifiers).
