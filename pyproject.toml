@@ -74,6 +74,7 @@ release = [
 
 [tool.tox]
 requires = ["tox>=4"]
+skip_missing_interpreters = true
 env_list = ["yamllint", "markdownlint", "3.14", "3.13", "3.12", "3.11"]
 
 [tool.tox.env_run_base]
