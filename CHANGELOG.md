@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Bump `python-freezerclient` dependency to version 6.4, to enable integration with the `openstack` CLI.
+* Include Python 3.10 in the test matrix, to support installation on Ubuntu 22.04.
 
 ## Version 0.0.5 (2026-06-23)
 

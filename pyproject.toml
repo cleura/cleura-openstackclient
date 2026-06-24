@@ -13,6 +13,7 @@ classifiers = [
     "Intended Audience :: System Administrators",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -21,7 +22,7 @@ classifiers = [
 ]
 dynamic = ["version"]
 description = "Conveniently installs OpenStack clients for use with Cleura Cloud"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "python-barbicanclient<7.2.0",
     "python-cinderclient<9.8.0",
@@ -75,7 +76,7 @@ release = [
 [tool.tox]
 requires = ["tox>=4"]
 skip_missing_interpreters = true
-env_list = ["yamllint", "markdownlint", "3.14", "3.13", "3.12", "3.11"]
+env_list = ["yamllint", "markdownlint", "3.14", "3.13", "3.12", "3.11", "3.10"]
 
 [tool.tox.env_run_base]
 description = "Run tests under {base_python}"
