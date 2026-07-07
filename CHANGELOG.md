@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Bump `python-heatclient` dependency to version 4.2, to fix "Invalid formatter provided" error on `openstack stack show`.
+
 ## Version 0.0.6 (2026-06-24)
 
 * Bump `python-freezerclient` dependency to version 6.4, to enable integration with the `openstack` CLI.
