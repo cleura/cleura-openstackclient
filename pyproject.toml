@@ -116,7 +116,7 @@ dependency_groups = [
 [tool.tox.env.bumpversion]
 skip_install = true
 description = "Increment the major, minor, or patch version indicator"
-commands = [["bump-my-version", "bump", "{posargs}"]]
+commands = [["bump-my-version", "bump", { replace = "posargs", extend = true} ]]
 dependency_groups = [
     "bumpversion",
 ]
