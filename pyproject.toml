@@ -44,7 +44,7 @@ license-files = ["LICENSE.txt"]
 
 # Adding an alias to the openstack CLI as a script makes pipx consider
 # this package an "app", which means it can be installed with just
-# "pip install" without specifying --include-deps.
+# "pipx install" without specifying --include-deps.
 [project.scripts]
 cleura-openstack = "openstackclient.shell:main"
 
