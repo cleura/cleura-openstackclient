@@ -14,22 +14,22 @@ To install from [PyPI](https://pypi.org/project/cleura-openstackclient/), run:
 
 ```shell
 # using pip
-pip install cleura-openstackclient==0.0.7
+pip install cleura-openstackclient==0.0.8
 ```
 ```shell
 # using pipx
-pipx install cleura-openstackclient==0.0.7
+pipx install cleura-openstackclient==0.0.8
 ```
 
 To install directly from [the repository](https://github.com/cleura/cleura-openstackclient), run:
 
 ```shell
 # using pip
-pip install git+https://github.com/cleura/cleura-openstackclient@v0.0.7
+pip install git+https://github.com/cleura/cleura-openstackclient@v0.0.8
 ```
 ```shell
 # using pipx
-pipx install git+https://github.com/cleura/cleura-openstackclient@v0.0.7
+pipx install git+https://github.com/cleura/cleura-openstackclient@v0.0.8
 ```
 
 Then, invoke the `openstack` command provided by the `python-openstackclient` package.

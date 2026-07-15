@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 0.0.8 (2026-07-15)
 
 * Add `cleura-openstack` as an alias for `openstack`.
 
