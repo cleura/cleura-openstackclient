@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Add `cleura-openstack` as an alias for `openstack`.
+
 ## Version 0.0.7 (2026-07-07)
 
 * Bump `python-heatclient` dependency to version 4.2, to fix "Invalid formatter provided" error on `openstack stack show`.
