@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.0.9 (2026-07-17)
+
+* Maintenance release, solely for pushing the updated README to PyPI.
+
 ## Version 0.0.8 (2026-07-15)
 
 * Add `cleura-openstack` as an alias for `openstack`.
