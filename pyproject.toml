@@ -58,6 +58,9 @@ Changelog = "https://github.com/cleura/cleura-openstackclient/blob/main/CHANGELO
 PyPI = "https://pypi.org/project/cleura-openstackclient/"
 
 [dependency-groups]
+coverage = [
+    "coverage",
+]
 pytest = [
     "pytest",
 ]
@@ -95,9 +98,9 @@ description = "Run tests under {base_python}"
 pass_env = ["OS_*"]
 commands = [
     ["flake8"],
-    ["python", "-m", "pytest", "tests/", "-v", { replace = "posargs", extend = true}]
+    ["coverage", "run", "-m", "pytest", "tests/", "-v", { replace = "posargs", extend = true}]
 ]
-dependency_groups = ["flake8", "pytest"]
+dependency_groups = ["flake8", "coverage", "pytest"]
 
 [tool.tox.env.gitlint]
 skip_install = true
@@ -166,6 +169,18 @@ dependency_groups = [
     "release",
 ]
 
+[tool.tox.env.coverage]
+skip_install = true
+commands = [
+    ["coverage", "combine"],
+    ["coverage", "html"],
+    ["coverage", "xml"],
+    ["coverage", "report"],
+]
+dependency_groups = [
+    "coverage",
+]
+
 [tool.flake8]
 max-line-length = 180
 statistics = true
@@ -187,3 +202,9 @@ filename = "README.md"
 filename = "CHANGELOG.md"
 search = "Unreleased"
 replace = "Version {new_version} ({now:%Y-%m-%d})"
+
+[tool.coverage.run]
+parallel = true
+
+[tool.coverage.report]
+precision = 2

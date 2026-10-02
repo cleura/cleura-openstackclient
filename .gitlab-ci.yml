@@ -53,7 +53,9 @@ test:
           - "3.14"
   script:
     - tox
-
+  artifacts:
+    paths:
+      - .coverage*
 
 build-package:
   stage: build
@@ -66,6 +68,20 @@ build-package:
   rules:
     - when: on_success
 
+coverage:
+  stage: build
+  image: python:3.14
+  script:
+    - tox -e coverage
+    - mv htmlcov public
+  coverage: '/TOTAL.*\s+(\d+\.\d+%)$/'
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  pages:
+    path_prefix: "$CI_COMMIT_BRANCH"
+    expire_in: 1 week
 
 install-check:
   stage: check

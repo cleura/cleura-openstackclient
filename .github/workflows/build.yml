@@ -48,3 +48,37 @@ jobs:
           pip install tox
       - name: Test with tox
         run: tox
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-${{ matrix.python-version }}-${{ matrix.pip-version }}
+          path: '.coverage.*'
+          retention-days: 1
+          include-hidden-files: true
+
+  report:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+      - name: Download artifacts
+        uses: actions/download-artifact@v8
+      - name: Set up Python 3.14
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.14
+      - name: Install dependencies
+        run: |
+          pip install tox
+      - name: Compile coverage data
+        run: |
+          mv coverage-*/.coverage.* .
+          tox -e coverage
+      - name: Upload htmlcov archive
+        uses: actions/upload-artifact@v7
+        with:
+          name: htmlcov
+          path: htmlcov
+          retention-days: 7

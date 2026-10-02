@@ -3,3 +3,7 @@
 *.egg-info/
 .ai
 **/__pycache__
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
